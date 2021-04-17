@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sxt.springcloud.entities.Dept;
 import com.sxt.springcloud.service.DeptService;
 
-@RestController
+@RestController(value="/dept")
 public class DeptController {
 
 	@Autowired
@@ -23,22 +23,22 @@ public class DeptController {
 	@Autowired
 	private DiscoveryClient client;
 	
-	@RequestMapping(value="/dept/add", method = RequestMethod.POST)
+	@RequestMapping(value="/add", method = RequestMethod.POST)
 	public boolean add(@RequestBody Dept dept) {
 		return service.add(dept);
 	}
 	
-	@RequestMapping(value="/dept/get/{id}", method = RequestMethod.GET)
+	@RequestMapping(value="/get/{id}", method = RequestMethod.GET)
 	public Dept get(@PathVariable("id") Long id) {
 		return service.get(id);
 	}
 	
-	@RequestMapping(value="/dept/list", method = RequestMethod.GET)
+	@RequestMapping(value="/list", method = RequestMethod.GET)
 	public List<Dept> list() {
 		return service.list();
 	}
 	
-	@RequestMapping(value = "/dept/discovery", method = RequestMethod.GET)
+	@RequestMapping(value = "/discovery", method = RequestMethod.GET)
 	public Object discovery()
 	{
 		List<String> list = client.getServices();
