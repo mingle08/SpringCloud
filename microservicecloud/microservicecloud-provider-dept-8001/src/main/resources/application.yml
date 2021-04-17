@@ -11,7 +11,7 @@ spring:
     name: microservicecloud-dept
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    driver-class-name: org.gjt.mm.mysql.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://192.168.1.101:3306/cloudDB01 
     username: root
     password: hu820826
