@@ -14,7 +14,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sxt.springcloud.entities.Dept;
 import com.sxt.springcloud.service.DeptService;
 
-@RestController(value="/dept")
+@RestController
+@RequestMapping(value="/dept")
 public class DeptController {
 
 	@Autowired
