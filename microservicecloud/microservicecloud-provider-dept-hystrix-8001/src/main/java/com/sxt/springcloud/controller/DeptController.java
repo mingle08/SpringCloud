@@ -30,7 +30,7 @@ public class DeptController
 	}
 
 	@RequestMapping(value = "/dept/get/{id}", method = RequestMethod.GET)
-	@HystrixCommand(fallbackMethod = "processHystrix_Get")
+	@HystrixCommand(fallbackMethod = "processHystrixGet")
 	public Dept get(@PathVariable("id") Long id)
 	{
 		Dept dept = service.get(id);
@@ -40,7 +40,7 @@ public class DeptController
 		return dept;
 	}
 	
-	public Dept processHystrix_Get(@PathVariable("id") Long id) {
+	public Dept processHystrixGet(@PathVariable("id") Long id) {
 		Dept dept = new Dept();
 		dept.setDeptno(id);
 		dept.setDname("该ID:" + id + "没有对应的信息，null--@HystrixCommand");
