@@ -14,22 +14,28 @@
 			<version>${project.version}</version>
 		</dependency>
 		<!-- feign相关 -->
-		<dependency>
-		    <groupId>org.springframework.cloud</groupId>
-		    <artifactId>spring-cloud-starter-feign</artifactId>
-		</dependency>
-		<!-- Ribbon相关 -->
+	  <!-- https://mvnrepository.com/artifact/io.github.openfeign/feign-core -->
+	  <dependency>
+		  <groupId>io.github.openfeign</groupId>
+		  <artifactId>feign-core</artifactId>
+		  <version>11.0</version>
+	  </dependency>
+
+	  <!-- Ribbon相关 -->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-eureka</artifactId>
+			<version>1.4.7.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-ribbon</artifactId>
+			<version>1.4.7.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-config</artifactId>
+			<version>1.4.7.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
