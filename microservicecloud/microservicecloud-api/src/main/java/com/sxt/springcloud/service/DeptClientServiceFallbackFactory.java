@@ -8,6 +8,9 @@ import com.sxt.springcloud.entities.Dept;
 
 import feign.hystrix.FallbackFactory;
 
+/**
+ * 降级
+ */
 @Component
 public class DeptClientServiceFallbackFactory implements FallbackFactory<DeptClientService> {
 
