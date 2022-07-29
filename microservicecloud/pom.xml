@@ -14,7 +14,7 @@
 		<log4j-core.version>2.11.2</log4j-core.version>
 		<lombok.version>1.16.18</lombok.version>
 	    <logback.version>1.2.9</logback.version>
-	    <spring-security.version>5.3.4.RELEASE</spring-security.version>
+	    <spring-security.version>5.5.7</spring-security.version>
 	    <spring-data-jpa.version>2.7.2</spring-data-jpa.version>
 	    <querydsl.version>5.0.0</querydsl.version>
 	    <hibernate-entitymanager.version>5.6.8.Final</hibernate-entitymanager.version>
